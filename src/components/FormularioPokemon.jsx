@@ -152,17 +152,16 @@ const FormularioPokemon = () => {
               </div>
               <div>
                 <label htmlFor="ataque">Ataque: </label>
-                0
+                <span className="span-range">0</span>
                 <input
                   type="range"
                   id="ataque"
                   min="0"
                   max="100"
-                  placeholder="Nombre pokemon"
                   value={attack}
                   onChange={(e) => setAttack(e.target.value)}
                 />
-                100
+                <span className="span-range">{attack}/100</span>
               </div>
             </div>
             <div className="div-group-input">
@@ -181,7 +180,7 @@ const FormularioPokemon = () => {
                 <label htmlFor="defensa" className="label">
                   Defensa:{" "}
                 </label>
-                0
+                <span className="span-range">0</span>
                 <input
                   type="range"
                   id="defensa"
@@ -191,7 +190,7 @@ const FormularioPokemon = () => {
                   value={defense}
                   onChange={(e) => setDefense(e.target.value)}
                 />
-                100
+                <span className="span-range">{defense}/100</span>
               </div>
             </div>
             <div className="div-group-btn">

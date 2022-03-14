@@ -182,6 +182,10 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   background: var(--morado);
 }
 
+.span-range{
+  font-size: 12px;
+}
+
 .mensaje {
   display: flex;
   padding: 15px 10px;
