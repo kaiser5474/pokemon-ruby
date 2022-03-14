@@ -17,6 +17,7 @@ const FormularioPokemon = () => {
     pokemones,
     setMostrarFormularioPokemon,
     pokemonSelect,
+    setPokemonSelect,
   } = usePokemones();
 
   useEffect(() => {
@@ -121,6 +122,7 @@ const FormularioPokemon = () => {
 
   const cancelar = () => {
     limpiarCampos();
+    setPokemonSelect({});
     setMostrarFormularioPokemon(false);
   };
 
