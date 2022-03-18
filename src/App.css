@@ -6,6 +6,7 @@
   --blanco: white;
   --darkgray: rgb(223, 226, 228);
   --rosa: rgb(212, 146, 158);
+  --rojo: rgb(255, 2, 2); /*Añadido*/
 }
 
 body {
@@ -73,7 +74,7 @@ td {
 @media screen and (max-width: 450px) {
   table {
     display: block;
-    overflow-x: auto;
+    overflow-x: auto; /*Se puede omitir*/
   }
 }
 
@@ -90,7 +91,7 @@ td {
   color: white;
   font-weight: bold;
   font-size: 15px;
-  /* text-transform: uppercase; */
+  /* text-transform: uppercase; */ /*Me gustaria poner esto en el diseño*/
   cursor: pointer;
   background-color: var(--morado);
   border: none;
@@ -152,6 +153,14 @@ td {
   width: 12rem;
 }
 
+/* New Style*/
+@media screen and (max-width: 600px) {
+  .form-input {
+    width: 100%;
+  }
+}
+/* End New Style*/
+
 input[type="range"] {
   -webkit-appearance: none;
 }
@@ -179,10 +188,16 @@ input[type="range"]:focus {
 }
 
 input[type="range"]:focus::-webkit-slider-runnable-track {
-  background: var(--morado);
+  background: var(--morado-oscuro); /*Corregido de background: var(--morado);*/
 }
 
-.span-range{
+/* New Style*/
+input[type="range"]:focus::-webkit-slider-thumb {
+  background: var(--morado-oscuro);
+}
+/* End New Style*/
+
+.span-range {
   font-size: 12px;
 }
 
@@ -199,7 +214,7 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
 }
 
 .error {
-  background-color: rgb(255, 2, 2);
+  background-color: var(--rojo);
 }
 
 .informacion {
