@@ -21,7 +21,9 @@ const FormularioPokemon = () => {
   } = usePokemones();
 
   useEffect(() => {
-    if ([name, attack, image, defense].includes("")) {
+    const r = /[A-Z]/i;
+    //if ([name, attack, image, defense].includes(re) ) {
+    if (!r.test(name)) {
       setDisabledButton("disabled");
     } else {
       setDisabledButton("");
